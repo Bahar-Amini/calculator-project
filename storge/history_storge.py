@@ -19,4 +19,4 @@ class JsonStorage:
             return json.load(file)
         
     def delete_history(self):
-        pass
+        self.save([])

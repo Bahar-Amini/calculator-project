@@ -14,5 +14,8 @@ class History:
     def get_history(self):
         return self.operations
 
+    def delete(self):
+        self.storge.delete()
+
 
         

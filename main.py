@@ -13,6 +13,5 @@ class main():
     result = calculator.calculate(15,"+",5)
     storage.delete_history()
     print(result)
-
 if __name__=="__main__":
     main()
