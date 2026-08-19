@@ -10,7 +10,7 @@ class Addition(Operation):
 
 class Division(Operation):
     def execute(self,a,b):
-        if a ==0:
+        if b==0:
             return ValueError
         return a / b
 

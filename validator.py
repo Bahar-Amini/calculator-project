@@ -13,3 +13,5 @@ class Validator():
         if not isinstance(operator,str):
             raise ValueError("the operator must be string")
 
+        
+

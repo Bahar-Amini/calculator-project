@@ -12,10 +12,13 @@ class History:
         self.storage.save(self.operations)
 
     def get_history(self):
-        return self.operations
+        for item in self.operations:
+            print(item)
 
     def delete(self):
-        self.storge.delete()
+        self.storage.delete_history()
+        self.storage.save(self.operations)
+        
 
 
         
