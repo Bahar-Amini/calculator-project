@@ -4,11 +4,11 @@ class Calculator():
         self.factory = factory 
         self.history = history
     def calculate(self,a,operator,b):
-        self.validator.validate_numbers(a,b)
+        num1,num2 = self.validator.validate_numbers(a,b)
         self.validator.validate_operator(operator)
         operation = self.factory.create(operator)
-        result = operation.execute(a,b)
-        expression = f"{a} {operator} {b}"
+        result = operation.execute(num1,num2)
+        expression = f"{num1} {operator} {num2}"
         self.history.add(expression,result)
         return result
 

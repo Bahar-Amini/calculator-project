@@ -18,13 +18,20 @@ class main():
         choice =input("your choice(1/2/0):")
         os.system('cls')
         if choice == '1':
-            operation = input("Enter Operation:(+,-,/,*) ")
-            num1 = int(input("Enter first number: "))
-            num2 = int(input("Enter second number: "))
-            result = calculator.calculate(num1,operation,num2)
-            print(f"{num1} {operation} {num2} : {result}")
-            os.system('pause')
-            os.system('cls')
+            while True:
+                try:
+                    operation = input("Enter Operation:(+,-,/,*) ")
+                    num1 = input("Enter first number: ")
+                    num2 = input("Enter second number: ")
+                    result = calculator.calculate(num1,operation,num2) 
+                    print(f"{num1} {operation} {num2} : {result}")
+                    os.system('pause')
+                    os.system('cls')   
+                    break
+                except ValueError as error:
+                    print(error)  
+                    os.system('pause')
+                    os.system('cls')   
         elif choice == '2':
             while True:
                 print("==============History Menu===============",end='\n')
