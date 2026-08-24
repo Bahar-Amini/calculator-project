@@ -10,10 +10,11 @@ class Addition(Operation):
 
 class Division(Operation):
     def execute(self,a,b):
-        if b==0:
-            return ValueError
-        return a / b
-
+        try:
+            return a/b
+        except :
+            raise ZeroDivisionError("Division By zero error")
+            
 class Mulltiplication(Operation):
     def execute(self,a,b):
         return a * b
