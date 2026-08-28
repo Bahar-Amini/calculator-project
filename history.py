@@ -3,11 +3,8 @@ class History:
         self.info = []
         self.storage = storage
 
-    def add(self,expression,result):
-        self.info.append({
-            "expression" : expression,
-            "result": result
-        })
+    def add(self, expression, result):
+        self.info.append({"expression": expression, "result": result})
 
         self.storage.save(self.info)
 
@@ -18,7 +15,3 @@ class History:
     def delete(self):
         self.storage.delete_history()
         self.storage.load()
-        
-
-
-        
